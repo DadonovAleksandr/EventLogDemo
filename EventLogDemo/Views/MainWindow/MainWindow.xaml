@@ -6,8 +6,20 @@
         xmlns:local="clr-namespace:EventLogDemo"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
         xmlns:fa="http://schemas.fontawesome.com/icons/"
+        xmlns:cmd="clr-namespace:EventLogDemo.Infrastructure.Commands"
+        xmlns:vm="clr-namespace:EventLogDemo.ViewModels"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Background="#272537"
+        Title="{Binding Title}" Height="450" Width="800">
+    <Window.Resources>
+        <cmd:CloseApplicationCommand x:Key="CloseAppCommand"/>
+    </Window.Resources>
+    <Window.InputBindings>
+        <KeyBinding Modifiers="Ctrl" Key="Q" Command="{StaticResource CloseAppCommand}"/>
+    </Window.InputBindings>
+    <Window.DataContext>
+        <vm:MainWindowViewModel/>
+    </Window.DataContext>
     <Grid>
         
     </Grid>
