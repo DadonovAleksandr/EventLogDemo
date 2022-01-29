@@ -54,7 +54,7 @@
             <Border Grid.Column="1" CornerRadius="10" Background="#353340" Margin="5" Height="40">
                 <TextBox Text="{Binding Path=ClientRepositoryFilePath, Mode=TwoWay}" FontSize="16" Margin="5,0" Foreground="White" VerticalAlignment="Center" Cursor="IBeam" />
             </Border>
-            <Button Grid.Column="2" Width="140">
+            <Button Grid.Column="2" Width="140" Command="{Binding Path=AddMessageCommand}">
                 <StackPanel Orientation="Horizontal">
                     <fa:ImageAwesome Icon="Regular_PlusSquare" Foreground="White" Margin="0,0,10,0"/>
                     <TextBlock Text="Добавить"/>

@@ -14,7 +14,7 @@ namespace EventLogDemo.ViewModels
         public MainWindowViewModel()
         {
             #region Commands
-            ChangePageIndexCommand = new RelayCommand(OnChangePageIndexCommandExecuted, CanChangePageIndexCommandExecute);
+            AddMessageCommand = new RelayCommand(OnAddMessageCommandExecuted, CanAddMessageCommandExecute);
             #endregion
 
             
@@ -34,10 +34,10 @@ namespace EventLogDemo.ViewModels
 
         #endregion
 
-        #region ChangePageIndexCommand
-        public ICommand ChangePageIndexCommand { get; }
+        #region AddMessageCommand
+        public ICommand AddMessageCommand { get; }
 
-        private void OnChangePageIndexCommandExecuted(object p)
+        private void OnAddMessageCommandExecuted(object p)
         {
             //if (p is null) return;
             //SelectedPageIndex = Convert.ToInt32(p);
@@ -51,7 +51,7 @@ namespace EventLogDemo.ViewModels
             //};
         }
 
-        private bool CanChangePageIndexCommandExecute(object p) => true;
+        private bool CanAddMessageCommandExecute(object p) => true;
         #endregion
 
 
